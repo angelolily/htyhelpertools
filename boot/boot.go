@@ -1,7 +1,7 @@
 package boot
 
 import (
-	_ "htyhelpertools/packed"
+	_ "github.com/angelolily/htyhelpertools/packed"
 )
 
 func init() {

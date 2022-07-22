@@ -1,8 +1,8 @@
 package main
 
 import (
-	_ "htyhelpertools/boot"
-	_ "htyhelpertools/router"
+	_ "github.com/angelolily/htyhelpertools/boot"
+	_ "github.com/angelolily/htyhelpertools/router"
 
 	"github.com/gogf/gf/frame/g"
 )
