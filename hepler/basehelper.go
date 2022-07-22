@@ -1,5 +1,6 @@
-package api
+package hepler
 
+//基础工具包
 import (
 	"encoding/json"
 	"errors"
