@@ -4,10 +4,6 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"io"
-	"math/rand"
-	"os"
-	"strings"
 	"github.com/gogf/gf/container/gmap"
 	"github.com/gogf/gf/database/gdb"
 	"github.com/gogf/gf/encoding/gjson"
@@ -17,22 +13,17 @@ import (
 	"github.com/gogf/gf/os/glog"
 	"github.com/gogf/gf/util/gconv"
 	uuid "github.com/satori/go.uuid"
+	"io"
+	"math/rand"
+	"os"
+	"strings"
 )
-
-//检查文件是否存在
-func checkFileIsExist(filename string) bool {
-	var exist = true
-	if _, err := os.Stat(filename); os.IsNotExist(err) {
-		exist = false
-	}
-	return exist
-}
 
 //将字符串写入文件
 func WriteFile(content string, filepath string, replace bool) error {
 	var f *os.File
 	var err error
-	if checkFileIsExist(filepath) {
+	if CheckFileIsExist(filepath) {
 		if !replace {
 			err = errors.New(" 已存在，需删除才能重新生成...")
 		}
@@ -239,4 +230,3 @@ func CheckFileIsExist(filename string) bool {
 	}
 	return exist
 }
-
